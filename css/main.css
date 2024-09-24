@@ -1,0 +1,291 @@
+.animate-set {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+}
+
+.animate-set.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.textContainer .text {
+    position: relative;
+    color: #212529;
+    font-size: 50px;
+    /* font-weight: bolder; */
+    letter-spacing: -0.10ch;
+    font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+    line-height: 1;
+}
+
+.textContainer .text.first-text {
+    color: #212529;
+}
+
+.text.second-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    border-left: 2px solid #212529;
+    width: 100%;
+    animation: animate 2s steps(64) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.projectThumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.projectThumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.projectThumbnail:hover .overlay-link {
+    opacity: 1;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+.logo-name {
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #212529;
+    /* Background color for the button */
+    color: white;
+    /* Text color */
+    border-radius: 50%;
+    /* Circular shape */
+    display: flex;
+    /* Flexbox for centering */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    font-size: 24px;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth transitions */
+    opacity: 0;
+    /* Hidden by default */
+    transform: translateY(100px);
+    /* Move down initially */
+    z-index: 1000;
+    /* Ensure it appears above other content */
+}
+
+.back-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #343a40;
+}
+
+.imgfluid {
+    width: 100%;
+    height: 600px;
+}
+
+/* .dark-theme * {
+    background-color: #212529 !important;
+    color: white !important;
+    transition: background-color 0s ease-in, color 0.5s ease-in-out;
+/* } */
+
+.navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    background-color: none;
+    border: none;
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+}
+
+.dark-theme .navbar-toggler {
+    background-color: none !important;
+}
+
+#sidebar {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    background-color: #343a40;
+    transition: right 0.3s ease, background-color 0.5s ease-in-out;
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+#sidebar li,
+#sidebar ul,
+#sidebar a,
+#closeSidebar {
+    background-color: #212529 !important;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.lineHeight {
+    line-height: 50px;
+}
+
+.fontSize24 {
+    font-size: 24px;
+}
+
+.fontSize20 {
+    font-size: 16px;
+}
+
+.displayName {
+    letter-spacing: -0.10ch;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+    font-size: 12rem;
+    /* font-weight: 700; */
+    line-height: 1;
+}
+
+.display-joke {
+    font-family: Roboto Mono, sans-serif;
+}
+
+.rowCustom {
+    height: 100%;
+}
+
+.cursor {
+    cursor: default;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black;
+    transition: 0.1s ease;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* mix-blend-mode: difference; */
+    opacity: 60%;
+}
+
+.projectHeadings {
+    text-transform: none;
+    font-family: Soehne, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    .displayName {
+        font-size: 4rem;
+    }
+
+    .display-joke {
+        font-size: 1.5rem;
+    }
+
+    #sidebar {
+        width: 75%;
+        right: -100%;
+    }
+
+    .textContainer .text {
+        position: relative;
+        color: #212529;
+        font-size: 30px;
+        /* font-weight: bolder; */
+        letter-spacing: -0.10ch;
+        font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+        font-weight: 700;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .displayName {
+        font-size: 4rem;
+    }
+
+    .rowCustom {
+        height: 30%;
+    }
+
+    .display-joke {
+        font-size: 1.1rem;
+    }
+    .textContainer .text {
+        position: relative;
+        color: #212529;
+        font-size: 30px;
+        /* font-weight: bolder; */
+        letter-spacing: -0.10ch;
+        font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+        font-weight: 700;
+        line-height: 1;
+    }
+}
