@@ -50,11 +50,11 @@
     background-color: white;
     border-left: 2px solid #212529;
     width: 100%;
+    transform: translateX(0);
     animation: animate 2s steps(64) infinite;
 }
 
 @keyframes animate {
-
     40%,
     60% {
         left: 100%;
