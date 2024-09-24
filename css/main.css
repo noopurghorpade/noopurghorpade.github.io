@@ -266,6 +266,9 @@ body {
 /* Media Queries for Responsive Design */
 
 @media (max-width: 768px) {
+    body{
+        scrollbar-width: 0px;
+    }
     .displayName {
         font-size: 4rem;
     }
@@ -292,6 +295,9 @@ body {
 }
 
 @media (max-width: 576px) {
+    body{
+        scrollbar-width: 0px;
+    }
     .displayName {
         font-size: 4rem;
     }
