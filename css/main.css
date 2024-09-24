@@ -26,10 +26,13 @@
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
 .textContainer{
     overflow: hidden;
 }
+
 .textContainer .text {
+    
     position: relative;
     color: #212529;
     font-size: 50px;
@@ -220,7 +223,7 @@ body {
 }
 
 .displayName {
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
@@ -279,7 +282,7 @@ body {
     .textContainer .text {
         position: relative;
         color: #212529;
-        font-size: 30px;
+        font-size: 25px;
         /* font-weight: bolder; */
         letter-spacing: -0.10ch;
         font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
@@ -303,7 +306,7 @@ body {
     .textContainer .text {
         position: relative;
         color: #212529;
-        font-size: 30px;
+        font-size: 25px;
         /* font-weight: bolder; */
         letter-spacing: -0.10ch;
         font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
