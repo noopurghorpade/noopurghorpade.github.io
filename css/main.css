@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('fonts/Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'boldVanguard';
+    src: url('fonts/Fontspring-DEMO-vanguardcf-bold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.diff-font{
+    font-family: Vanguard, Impact, sans-serif;
+    letter-spacing: 0.0ch;
+}
+
 .animate-set {
     opacity: 0 !important;
     transform: translateY(20px) !important;
@@ -14,7 +33,7 @@
     font-size: 50px;
     /* font-weight: bolder; */
     letter-spacing: -0.10ch;
-    font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+    font-family: 'YourCustomFont', serif;
     line-height: 1;
 }
 
@@ -199,11 +218,11 @@ body {
 }
 
 .displayName {
-    letter-spacing: -0.10ch;
+    letter-spacing: 5px;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+    font-family: 'YourCustomFont', serif;
     font-size: 12rem;
     /* font-weight: 700; */
     line-height: 1;
@@ -218,7 +237,7 @@ body {
 }
 
 .cursor {
-    cursor: default;
+    cursor: none;
     position: fixed;
     width: 100px;
     height: 100px;
