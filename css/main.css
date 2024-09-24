@@ -171,6 +171,7 @@ body {
     height: 100%;
     background-color: #343a40;
     transition: right 0.3s ease, background-color 0.5s ease-in-out;
+    z-index: 9999;
 }
 
 #sidebar.active {
