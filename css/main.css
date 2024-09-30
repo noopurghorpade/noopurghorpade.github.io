@@ -1,17 +1,35 @@
 @font-face {
     font-family: 'YourCustomFont';
-    src: url('fonts/Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2');
+    src: url('fonts/Raleway-Bold.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'boldVanguard';
-    src: url('fonts/Fontspring-DEMO-vanguardcf-bold.otf') format('woff2');
+    font-family: 'Raleway-Medium';
+    src: url('fonts/Raleway-Medium.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url('fonts/Raleway-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.link{
+    font-family: YourCustomFont;
+}
+
+.fontRalewayBold{
+    font-family: YourCustomFont;
+}
+
+.fontRalewayRegular{
+    font-family: Raleway-Regular;
+}
 .diff-font{
     font-family: Vanguard, Impact, sans-serif;
     letter-spacing: 0.0ch;
@@ -118,6 +136,7 @@ body {
 .logo-name {
     font-size: 16px;
     padding-top: 15px;
+    font-family: YourCustomFont;
 }
 
 /* Back to Top Button Styles */
@@ -223,7 +242,7 @@ body {
 }
 
 .displayName {
-    /* letter-spacing: 5px; */
+    letter-spacing: -15px;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
@@ -234,7 +253,8 @@ body {
 }
 
 .display-joke {
-    font-family: Roboto Mono, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
+    padding-left: 350px;
 }
 
 .rowCustom {
@@ -270,11 +290,19 @@ body {
         scrollbar-width: 0px;
     }
     .displayName {
-        font-size: 4rem;
+        letter-spacing: -15px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: 'YourCustomFont', serif;
+        font-size: 12rem;
+        /* font-weight: 700; */
+        line-height: 1;
     }
 
     .display-joke {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        padding-left: 0px;
     }
 
     #sidebar {
@@ -299,7 +327,14 @@ body {
         scrollbar-width: 0px;
     }
     .displayName {
-        font-size: 4rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: 'YourCustomFont', serif;
+        font-size: 5rem;
+        /* font-weight: 700; */
+        line-height: 1;
     }
 
     .rowCustom {
@@ -308,6 +343,7 @@ body {
 
     .display-joke {
         font-size: 1.1rem;
+        padding-left: 0px;
     }
     .textContainer .text {
         position: relative;
