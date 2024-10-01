@@ -1,38 +1,105 @@
 @font-face {
-    font-family: 'YourCustomFont';
-    src: url('fonts/Raleway-Bold.ttf') format('woff2');
+    font-family: "Raleway-Bold";
+    src: url("fonts/Raleway-Bold.ttf") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Raleway-Medium';
-    src: url('fonts/Raleway-Medium.ttf') format('woff2');
+    font-family: "vanguardCF-bold";
+    src: url("fonts/Fontspring-DEMO-vanguardcf-bold.otf") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Raleway-Regular';
-    src: url('fonts/Raleway-Regular.ttf') format('woff2');
+    font-family: "vanguardCF-demibold";
+    src: url("fonts/Fontspring-DEMO-vanguardcf-demibold.otf") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
-.link{
-    font-family: YourCustomFont;
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url("fonts/Raleway-Medium.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.fontRalewayBold{
-    font-family: YourCustomFont;
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("fonts/Raleway-Regular.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.fontRalewayRegular{
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.text {
+    position: absolute;
+    width: 450px;
+    left: 20%;
+    margin-left: -225px;
+    height: 40px;
+    /* top: 50%; */
+    /* margin-top: -20px; */
+    
+}
+.text   p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    float: left;
+}
+
+.word {
+    position: absolute;
+    width: 400px;
+    opacity: 0;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
+    
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.link {
+    font-family: Raleway-Bold;
+}
+
+.fontRalewayBold {
+    font-family: Raleway-Bold;
+}
+
+.fontRalewayRegular {
     font-family: Raleway-Regular;
 }
-.diff-font{
+
+.diff-font {
     font-family: Vanguard, Impact, sans-serif;
-    letter-spacing: 0.0ch;
+    letter-spacing: 0ch;
 }
 
 .animate-set {
@@ -45,18 +112,17 @@
     transform: translateY(0) !important;
 }
 
-.textContainer{
+.textContainer {
     overflow: hidden;
 }
 
 .textContainer .text {
-    
     position: relative;
     color: #212529;
     font-size: 50px;
     /* font-weight: bolder; */
-    letter-spacing: -0.10ch;
-    font-family: 'YourCustomFont', serif;
+    letter-spacing: -0.1ch;
+    font-family: "Raleway-Bold", serif;
     line-height: 1;
 }
 
@@ -78,6 +144,7 @@
 }
 
 @keyframes animate {
+
     40%,
     60% {
         left: 100%;
@@ -114,7 +181,8 @@
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
     color: white;
     font-size: 20px;
     display: flex;
@@ -128,7 +196,6 @@
     opacity: 1;
 }
 
-
 body {
     overflow-x: hidden;
 }
@@ -136,7 +203,7 @@ body {
 .logo-name {
     font-size: 16px;
     padding-top: 15px;
-    font-family: YourCustomFont;
+    font-family: Raleway-Bold;
 }
 
 /* Back to Top Button Styles */
@@ -242,11 +309,11 @@ body {
 }
 
 .displayName {
-    letter-spacing: -10px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: 'YourCustomFont', serif;
+    font-family: vanguardCF-bold, serif;
     font-size: 12rem;
     /* font-weight: 700; */
     line-height: 1;
@@ -255,6 +322,7 @@ body {
 .display-joke {
     font-family: Raleway-Medium, sans-serif;
     padding-left: 350px;
+    font-size: 16px;
 }
 
 .rowCustom {
@@ -286,15 +354,16 @@ body {
 /* Media Queries for Responsive Design */
 
 @media (max-width: 768px) {
-    body{
+    body {
         scrollbar-width: 0px;
     }
+
     .displayName {
         letter-spacing: -15px;
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
-        font-family: 'YourCustomFont', serif;
+        font-family: "Raleway-Bold", serif;
         font-size: 12rem;
         /* font-weight: 700; */
         line-height: 1;
@@ -315,23 +384,24 @@ body {
         color: #212529;
         font-size: 25px;
         /* font-weight: bolder; */
-        letter-spacing: -0.10ch;
-        font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+        letter-spacing: -0.1ch;
+        font-family: "Fontspring-DEMO-vanguardcf-demibold", sans-serif;
         font-weight: 700;
         line-height: 1;
     }
 }
 
 @media (max-width: 576px) {
-    body{
+    body {
         scrollbar-width: 0px;
     }
+
     .displayName {
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
-        font-family: 'YourCustomFont', serif;
+        font-family: "Raleway-Bold", serif;
         font-size: 5rem;
         /* font-weight: 700; */
         line-height: 1;
@@ -345,13 +415,14 @@ body {
         font-size: 1.1rem;
         padding-left: 0px;
     }
+
     .textContainer .text {
         position: relative;
         color: #212529;
         font-size: 25px;
         /* font-weight: bolder; */
-        letter-spacing: -0.10ch;
-        font-family: 'Fontspring-DEMO-vanguardcf-demibold', sans-serif;
+        letter-spacing: -0.1ch;
+        font-family: "Fontspring-DEMO-vanguardcf-demibold", sans-serif;
         font-weight: 700;
         line-height: 1;
     }
