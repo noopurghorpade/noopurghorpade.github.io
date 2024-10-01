@@ -12,7 +12,7 @@ onload = function () {
         }, 1000); // Wait until slide-up transition completes
     }, 3000); // Keep the loader visible for 2 seconds
 
-    
+
     let toggleSidebar = document.querySelector("#toggleSidebar");
     let sidebar = document.querySelector("#sidebar");
     let closeSidebar = document.querySelector("#closeSidebar");
@@ -163,8 +163,22 @@ onload = function () {
         $('.page-loader').fadeOut('slow');
     }, 3500);
 
+    const circleBtn = document.getElementById('contact-btn');
+
+    circleBtn.addEventListener('mousemove', (e) => {
+        const rect = circleBtn.getBoundingClientRect();
+        const x = e.clientX - rect.left - circleBtn.offsetWidth / 2;
+        const y = e.clientY - rect.top - circleBtn.offsetHeight / 2;
+
+        circleBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    circleBtn.addEventListener('mouseleave', () => {
+        circleBtn.style.transform = 'translate(0, 0)';
+    });
+
 }
 
 
-    
+
 
