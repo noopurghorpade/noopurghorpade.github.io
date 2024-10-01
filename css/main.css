@@ -594,6 +594,20 @@ body {
     .paddingLeft-100px {
         padding-left: 212px;
     }
+    .cursor {
+        display: none;
+        cursor: none;
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: black;
+        transition: 0.1s ease;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        /* mix-blend-mode: difference; */
+        opacity: 60%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -657,5 +671,20 @@ body {
 
     .paddingLeft-100px {
         padding-left: 77px;
+    }
+
+    .cursor {
+        display: none;
+        cursor: none;
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: black;
+        transition: 0.1s ease;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        /* mix-blend-mode: difference; */
+        opacity: 60%;
     }
 }
