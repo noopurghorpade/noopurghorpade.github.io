@@ -1,6 +1,81 @@
-html{
+html {
     scrollbar-width: none;
 }
+
+/* Ensure full black background for the loader */
+.loaders {
+    position: fixed;          /* Fix to viewport */
+    top: 0;                  /* Position at the top */
+    left: 0;
+    z-index: 99999;                 /* Align to the left */
+    width: 100vw;            /* Full width */
+    height: 100vh;           /* Full height */
+    background-color: black; /* Black background */
+    display: flex;           /* Center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    transform: translateY(-100%); /* Start off-screen */
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.spinner {
+    --circle-width: 20px;
+    position: relative;
+    width: 100px; /* Adjusted size */
+    height: 100px; /* Adjusted size */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.spinner:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--circle-width);
+    height: var(--circle-width);
+    background: conic-gradient(transparent var(--firstpct), #fff var(--firstpct), #fff var(--secondpct), transparent var(--secondpct)), rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 10;
+    animation: spinning 2s infinite linear;
+    border: 0px solid white;
+}
+
+/* Spinner animation */
+@keyframes spinning {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        --secondpct: 0%;
+        --firstpct: 0%;
+    }
+
+    50% {
+        --firstpct: 0%;
+        --secondpct: 100%;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        --firstpct: 100%;
+        --secondpct: 100%;
+    }
+}
+
+/* Define custom properties for gradient animation */
+@property --firstpct {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --secondpct {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+
 @font-face {
     font-family: "Raleway-Bold";
     src: url("fonts/Raleway-Bold.ttf") format("woff2");
@@ -50,7 +125,11 @@ html{
     font-style: normal;
 }
 
-.fontSize16{
+.fontWeight100 {
+    font-weight: 100;
+}
+
+.fontSize16 {
     font-size: 16px;
 }
 
@@ -58,7 +137,7 @@ html{
     font-family: Poppins-Bold;
 }
 
-.fontPoppinsRegular{
+.fontPoppinsRegular {
     font-family: Poppins-Regular;
 }
 
@@ -79,7 +158,7 @@ body {
     /* margin-top: -20px; */
 }
 
-.text   p {
+.text p {
     display: inline-block;
     vertical-align: top;
     margin: 0;
@@ -95,7 +174,7 @@ body {
 .letter {
     display: inline-block;
     position: relative;
-    
+
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
 }
@@ -409,7 +488,7 @@ body {
         right: -100%;
     }
 
-    
+
 
     .textContainer .text {
         position: relative;
@@ -421,11 +500,13 @@ body {
         font-weight: 700;
         line-height: 1;
     }
+
     .word {
         position: absolute;
         width: 263px;
         opacity: 0;
     }
+
 
     .text {
         /* position: absolute; */
