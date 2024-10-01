@@ -95,13 +95,13 @@ onload = function () {
     function animateLetterOut(cw, i) {
         setTimeout(function () {
             cw[i].className = 'letter out';
-        }, i * 80);
+        }, i * 20);
     }
 
     function animateLetterIn(nw, i) {
         setTimeout(function () {
             nw[i].className = 'letter in';
-        }, 340 + (i * 80));
+        }, 340 + (i * 20));
     }
 
     function splitLetters(word) {
@@ -120,7 +120,7 @@ onload = function () {
     }
 
     changeWord();
-    setInterval(changeWord, 4000);
+    setInterval(changeWord, 2000);
 
     function splitLetters(word) {
         var content = word.textContent;  // Use textContent instead of innerHTML
