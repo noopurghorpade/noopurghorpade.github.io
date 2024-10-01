@@ -1,4 +1,18 @@
 onload = function () {
+    let loader = document.getElementById('loader');
+
+    // Show the loader initially
+    loader.style.transform = 'translateY(0)'; // Slide into view from the top
+
+    // Hide the loader after the loading is done
+    setTimeout(function () {
+        loader.style.transform = 'translateY(-100%)'; // Slide back up out of view
+        setTimeout(function () {
+            loader.style.display = 'none';  // Remove loader from view
+        }, 1000); // Wait until slide-up transition completes
+    }, 3000); // Keep the loader visible for 2 seconds
+
+    
     let toggleSidebar = document.querySelector("#toggleSidebar");
     let sidebar = document.querySelector("#sidebar");
     let closeSidebar = document.querySelector("#closeSidebar");
@@ -9,6 +23,11 @@ onload = function () {
     let navBar2 = document.querySelector(".nav2");
     let backToTopButton = document.querySelector("#backToTop");
     let text = document.querySelector(".second-text");
+
+
+
+
+    // ... rest of your code
 
 
     // Toggle sidebar visibility
@@ -137,14 +156,15 @@ onload = function () {
             word.appendChild(letter);
             letters.push(letter);
         }
-    
+
         wordArray.push(letters);
     }
-
-}
-
-$(window).on('load', function () {
     setTimeout(function () { // allowing 3 secs to fade out loader
         $('.page-loader').fadeOut('slow');
     }, 3500);
-});
+
+}
+
+
+    
+
