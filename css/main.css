@@ -363,7 +363,7 @@ body {
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
-        font-family: "Raleway-Bold", serif;
+        font-family: vanguardCF-bold, serif;
         font-size: 12rem;
         /* font-weight: 700; */
         line-height: 1;
@@ -401,8 +401,8 @@ body {
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
-        font-family: "Raleway-Bold", serif;
-        font-size: 5rem;
+        font-family: vanguardCF-bold, serif;
+        font-size: 7rem;
         /* font-weight: 700; */
         line-height: 1;
     }
@@ -425,5 +425,15 @@ body {
         font-family: "Fontspring-DEMO-vanguardcf-demibold", sans-serif;
         font-weight: 700;
         line-height: 1;
+    }
+
+    .text {
+        position: absolute;
+        width: 450px;
+        left: 52%;
+        margin-left: -225px;
+        height: 40px;
+        /* top: 50%; */
+        /* margin-top: -20px; */
     }
 }
