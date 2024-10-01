@@ -332,11 +332,11 @@ body {
     overflow: hidden;
 }
 
-.projectThumbnail img {
-    width: 100%;
+/* .projectThumbnail img { */
+    /* width: 100%; */
     /* height: auto; */
-    display: block;
-}
+    /* display: block; */
+/* } */
 
 .overlay-link {
     position: absolute;
