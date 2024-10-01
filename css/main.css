@@ -13,6 +13,8 @@ html {
     /* padding-left: 10%; */
 }
 
+
+
 /* Circle styles */
 .btn-circle {
     position: relative;
@@ -587,6 +589,10 @@ body {
         height: auto;
         display: block;
     }
+
+    .paddingLeft-100px {
+        padding-left: 212px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -646,5 +652,9 @@ body {
         width: 100%;
         height: auto;
         display: block;
+    }
+
+    .paddingLeft-100px {
+        padding-left: 77px;
     }
 }
