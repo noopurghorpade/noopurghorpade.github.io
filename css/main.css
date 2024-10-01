@@ -504,6 +504,7 @@ body {
 }
 
 .cursor {
+    display: block;
     cursor: none;
     position: fixed;
     width: 100px;
