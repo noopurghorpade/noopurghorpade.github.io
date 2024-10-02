@@ -7,6 +7,14 @@ html {
     padding: 0px;
 }
 
+.travoPurple{
+    color: #783f7b;
+}
+
+.margin-top329{
+    margin-top: 329px;
+}
+
 .container-fluid {
     width: 100%; /* Use percentage */
     max-width: 100%; /* Prevent exceeding viewport */
