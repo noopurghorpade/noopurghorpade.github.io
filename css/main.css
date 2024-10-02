@@ -657,6 +657,10 @@ body {
         /* height: 247px; */
         width: 100%;
     }
+
+    .padding-left138 {
+        padding-left: 50px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -740,5 +744,9 @@ body {
     .imageOuter {
         /* height: 247px; */
         width: 100%;
+    }
+
+    .padding-left138 {
+        padding-left: 50px;
     }
 }
