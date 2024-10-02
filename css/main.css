@@ -13,7 +13,9 @@ html {
     /* padding-left: 10%; */
 }
 
-
+/* .backGroundKruise{
+    background-color: #ffd426;
+} */
 
 /* Circle styles */
 .btn-circle {
@@ -189,6 +191,29 @@ html {
     font-size: 16px;
 }
 
+.fontSize46 {
+    font-size: 46px;
+}
+
+.fontSize19 {
+    font-size: 19px;
+}
+
+.fontSize30 {
+    font-size: 30px;
+}
+
+.fontSize22 {
+    font-size: 22px;
+}
+
+.img-fluidManual{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+
 .fontSize12{
     font-size: 12px;
 }
@@ -205,6 +230,10 @@ html {
     font-family: vanguardCF-bold, serif;
 }
 
+.imageOuter{
+    height: 667px;
+    width: 100%;
+}
 
 .text {
     /* position: absolute; */
@@ -607,6 +636,11 @@ body {
         /* mix-blend-mode: difference; */
         opacity: 60%;
     }
+
+    .imageOuter {
+        height: 247px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -685,5 +719,10 @@ body {
         pointer-events: none;
         /* mix-blend-mode: difference; */
         opacity: 60%;
+    }
+
+    .imageOuter {
+        height: 247px;
+        width: 100%;
     }
 }
