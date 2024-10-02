@@ -231,7 +231,7 @@ html {
 }
 
 .imageOuter{
-    height: 667px;
+    /* height: 667px; */
     width: 100%;
 }
 
@@ -638,7 +638,7 @@ body {
     }
 
     .imageOuter {
-        height: 247px;
+        /* height: 247px; */
         width: 100%;
     }
 }
@@ -722,7 +722,7 @@ body {
     }
 
     .imageOuter {
-        height: 247px;
+        /* height: 247px; */
         width: 100%;
     }
 }
