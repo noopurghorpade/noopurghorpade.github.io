@@ -669,6 +669,18 @@ body {
     .padding-left138 {
         padding-left: 50px;
     }
+    .fontSize18 {
+        font-size: 14px;
+    }
+    .fontSize25 {
+        font-size: 21px;
+    }
+    .fontSize30 {
+        font-size: 22px;
+    }
+    .fontSize22 {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -756,5 +768,19 @@ body {
 
     .padding-left138 {
         padding-left: 50px;
+    }
+    .fontSize18 {
+        font-size: 14px;
+    }
+
+    .fontSize25 {
+        font-size: 21px;
+    }
+    .fontSize30 {
+        font-size: 22px;
+    }
+
+    .fontSize22 {
+        font-size: 17px;
     }
 }
