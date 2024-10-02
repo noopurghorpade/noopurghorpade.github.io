@@ -218,6 +218,22 @@ html {
     font-size: 12px;
 }
 
+.paddingLeft34{
+    padding-left: 34px;
+}
+
+.padding-left138{
+    padding-left: 138px;
+}
+
+.fontSize18{
+    font-size: 18px;
+}
+
+.fontSize25{
+    font-size: 25px;
+}
+
 .fontPoppinsBold {
     font-family: Poppins-Bold;
 }
