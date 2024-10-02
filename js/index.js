@@ -148,7 +148,7 @@ onload = function () {
         for (var i = 0; i < content.length; i++) {
             var letter = document.createElement('span');
             letter.className = 'letter';
-            if (content.charAt(i) === '') {
+            if (content.charAt(i) === ' ') {
                 letter.innerHTML = '&nbsp;';  // Add non-breaking space
             } else {
                 letter.innerHTML = content.charAt(i);
@@ -182,4 +182,3 @@ onload = function () {
 
 
 
- 
