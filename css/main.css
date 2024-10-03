@@ -11,6 +11,10 @@ html {
     color: #783f7b;
 }
 
+.infoBlue{
+    color: #1818ff;
+}
+
 .margin-top329{
     margin-top: 329px;
 }
@@ -621,7 +625,7 @@ body {
 
     .word {
         position: absolute;
-        width: 287px;
+        width: 322px;
         opacity: 0;
     }
 
@@ -721,7 +725,7 @@ body {
 
     .word {
         position: absolute;
-        width: 287px;
+        width: 322px;
         opacity: 0;
     }
 
