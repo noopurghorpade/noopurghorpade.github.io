@@ -7,6 +7,10 @@ html {
     padding: 0px;
 }
 
+.padding-right238 {
+    padding-right: 238px;
+}
+
 .travoPurple{
     color: #783f7b;
 }
@@ -701,6 +705,10 @@ body {
     .fontSize22 {
         font-size: 17px;
     }
+    .padding-right238 {
+        padding-right: 238px;
+    }
+    
 }
 
 @media (max-width: 576px) {
@@ -803,4 +811,8 @@ body {
     .fontSize22 {
         font-size: 17px;
     }
+    .padding-right238 {
+        padding-right: 238px;
+    }
+    
 }
