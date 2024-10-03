@@ -11,6 +11,18 @@ html {
     color: #783f7b;
 }
 
+.comfortDarkBlue{
+    color: #001f82;
+}
+
+.comfortLightBlue{
+    color: #008ee8;
+}
+
+.bgComfortLightBlue{
+    background-color: #008ee8;;
+}
+
 .infoBlue{
     color: #1818ff;
 }
@@ -236,6 +248,10 @@ html {
 
 .padding-left138{
     padding-left: 138px;
+}
+
+.fontSize50{
+    font-size: 50px;
 }
 
 .fontSize18{
