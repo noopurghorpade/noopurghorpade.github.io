@@ -10,8 +10,7 @@ onload = function () {
         setTimeout(function () {
             loader.style.display = 'none';  // Remove loader from view
         }, 1000); // Wait until slide-up transition completes
-    }, 3000); // Keep the loader visible for 2 seconds
-
+    }, 3000); // Keep the loader visible for 3 seconds
 
     let toggleSidebar = document.querySelector("#toggleSidebar");
     let sidebar = document.querySelector("#sidebar");
@@ -21,70 +20,70 @@ onload = function () {
     let cursor = document.querySelector(".cursor");
     let navBar = document.querySelector(".navbar");
     let navBar2 = document.querySelector(".nav2");
-    let backToTopButton = document.querySelector("#backToTop");
     let text = document.querySelector(".second-text");
 
+    const copyButton = document.querySelector("#copyButton");
+    const numberToCopy = document.querySelector("#numberToCopy");
 
-
-
-    // ... rest of your code
-
+    if (copyButton && numberToCopy) {
+        copyButton.addEventListener("click", function () {
+            let number = numberToCopy.innerText;
+            navigator.clipboard.writeText(number).then(() => {
+                copyButton.innerText = "COPIED!";
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        });
+    }
 
     // Toggle sidebar visibility
-    toggleSidebar?.addEventListener("click", () => {
-        sidebar.classList.toggle("active");
-    });
+    if (toggleSidebar && sidebar) {
+        toggleSidebar.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
 
-    // Close sidebar when clicking the close button
-    closeSidebar?.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-    });
-
-    // Close sidebar when clicking outside of it
-    document.addEventListener("click", (event) => {
-        if (!sidebar.contains(event.target) && !toggleSidebar.contains(event.target)) {
-            sidebar.classList.remove("active");
+        // Close sidebar when clicking the close button
+        if (closeSidebar) {
+            closeSidebar.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+            });
         }
-    });
+
+        // Close sidebar when clicking outside of it
+        document.addEventListener("click", (event) => {
+            if (!sidebar.contains(event.target) && !toggleSidebar.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    }
 
     // Cursor movement
-    document.addEventListener("mousemove", (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-    });
-
-    // Show the button when scrolling down 100px from the top
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-            backToTopButton.classList.add("show");
-        } else {
-            backToTopButton.classList.remove("show");
-        }
-    });
-
-    // Scroll back to the top smoothly when the button is clicked
-    backToTopButton?.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
+    if (cursor) {
+        document.addEventListener("mousemove", (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
         });
-    });
+    }
 
-    // let textLoad = ()=>{
-    //     setTimeout(()=>{
-    //         text.textContent ="COLLABORATE";
-    //     },0)
-    //     setTimeout(()=>{
-    //         text.textContent ="GRAB A COFFEE";
-    //     },2000)
-    //     setTimeout(()=>{
-    //         text.textContent ="TALK DESIGN";
-    //     },4000)
-    // }
+    let backToTopButton = document.querySelector("#backToTop");
 
-    // textLoad();
-    // setInterval(textLoad, 6000);
+    if (backToTopButton) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        });
+
+        backToTopButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    }
 
     // Word functionality
     var words = document.getElementsByClassName('word');
@@ -100,26 +99,26 @@ onload = function () {
 
         function changeWord() {
             var cw = wordArray[currentWord];
-            var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+            var nw = currentWord === words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
             for (var i = 0; i < cw.length; i++) {
                 animateLetterOut(cw, i);
             }
-    
+
             for (var i = 0; i < nw.length; i++) {
                 nw[i].className = 'letter behind';
                 nw[0].parentElement.style.opacity = 1;
                 animateLetterIn(nw, i);
             }
-    
-            currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+
+            currentWord = (currentWord === wordArray.length - 1) ? 0 : currentWord + 1;
         }
-    
+
         function animateLetterOut(cw, i) {
             setTimeout(function () {
                 cw[i].className = 'letter out';
             }, i * 20);
         }
-    
+
         function animateLetterIn(nw, i) {
             setTimeout(function () {
                 nw[i].className = 'letter in';
@@ -157,33 +156,30 @@ onload = function () {
             wordArray.push(letters); // Store the letters array for future animations
         }
 
-
         changeWord();
         setInterval(changeWord, 2000);
     }
 
-    setTimeout(function () { // allowing 3 secs to fade out loader
+    // Fading out loader
+    setTimeout(function () {
         $('.page-loader').fadeOut('slow');
     }, 3500);
 
-    const circleBtn = document.getElementById('contact-btn');
+    const circleButtons = document.querySelectorAll('.btn-circle');
 
-    circleBtn.addEventListener('mousemove', (e) => {
-        const rect = circleBtn.getBoundingClientRect();
-        const x = e.clientX - rect.left - circleBtn.offsetWidth / 2;
-        const y = e.clientY - rect.top - circleBtn.offsetHeight / 2;
+    circleButtons.forEach((circleBtn) => {
+        circleBtn.addEventListener('mousemove', (e) => {
+            const rect = circleBtn.getBoundingClientRect();
+            const x = e.clientX - rect.left - circleBtn.offsetWidth / 2;
+            const y = e.clientY - rect.top - circleBtn.offsetHeight / 2;
 
-        circleBtn.style.transform = `translate(${x}px, ${y}px)`;
+            // Apply translation based on mouse position
+            circleBtn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+
+        circleBtn.addEventListener('mouseleave', () => {
+            // Reset the position on mouse leave
+            circleBtn.style.transform = 'translate(0, 0)';
+        });
     });
-
-    circleBtn.addEventListener('mouseleave', () => {
-        circleBtn.style.transform = 'translate(0, 0)';
-    });
-
-
-
-}
-
-
-
-
+};
