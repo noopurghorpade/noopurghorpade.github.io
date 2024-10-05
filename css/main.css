@@ -7,6 +7,21 @@ html {
     padding: 0px;
 }
 
+.displayNameContact2 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: vanguardCF-bold, serif;
+    font-size: 25rem;
+    /* font-weight: 700; */
+    line-height: 1;
+}
+
+.bglightgray{
+    background-color: #ebebeb;
+}
+
 .padding-right238 {
     padding-right: 238px;
 }
@@ -83,7 +98,7 @@ html {
 
 /* Hover effect to follow mouse */
 .btn-circle:hover {
-    transform: translate(-50%, -50%);
+    transform: translate(-5%, -5%);
 }
 
 
@@ -308,6 +323,19 @@ html {
     opacity: 0;
 }
 
+.word2 {
+    font-size: 140px!important;
+    line-height: 150px!important;
+    font-family: vanguardCF-bold, serif!important;
+    position: absolute!important;
+    width: 515px!important;
+    opacity: 0;
+}
+
+.margintop363 {
+    margin-top: 363px;
+}
+
 .letter {
     display: inline-block;
     position: relative;
@@ -457,7 +485,7 @@ body {
 /* Back to Top Button Styles */
 .back-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 120px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -479,17 +507,12 @@ body {
     /* Pointer cursor on hover */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     /* Smooth transitions */
-    opacity: 0;
+    opacity: 1;
     /* Hidden by default */
     transform: translateY(100px);
     /* Move down initially */
     z-index: 1000;
     /* Ensure it appears above other content */
-}
-
-.back-to-top.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .back-to-top:hover {
@@ -649,6 +672,8 @@ body {
         opacity: 0;
     }
 
+    
+
 
     .text {
         /* position: absolute; */
@@ -709,6 +734,16 @@ body {
         padding-right: 0px;
     }
     
+    .displayNameContact2 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: vanguardCF-bold, serif;
+        font-size: 8rem;
+        /* font-weight: 700; */
+        line-height: 1;
+    }
 }
 
 @media (max-width: 576px) {
@@ -815,4 +850,18 @@ body {
         padding-right: 0px;
     }
     
+    .displayNameContact2 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: vanguardCF-bold, serif;
+        font-size: 8rem;
+        /* font-weight: 700; */
+        line-height: 1;
+    }
+    .word2 {
+        font-size: 140px!important;
+        line-height: 150px!important;
+    }
 }
