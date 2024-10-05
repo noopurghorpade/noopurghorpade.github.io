@@ -7,6 +7,12 @@ html {
     padding: 0px;
 }
 
+.fontSize37{
+    font-size: 37px;
+}
+
+
+
 .displayNameContact2 {
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -224,6 +230,21 @@ html {
     src: url("fonts/Poppins-Bold.ttf") format("woff2");
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins-Semi-Bold";
+    src: url("fonts/Poppins-SemiBold.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.space{
+    line-height: 40px;
+}
+
+.fontPoppinsSemiBold{
+    font-family: "Poppins-Semi-Bold";
 }
 
 .fontWeight100 {
