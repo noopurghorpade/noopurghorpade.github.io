@@ -326,7 +326,7 @@ html {
     /* margin-left: -225px; */
     height: 40px;
     /* top: 50%; */
-    font-size: 88px;
+    font-size: 130px;
     /* margin-top: -20px; */
 }
 
@@ -340,7 +340,7 @@ html {
 .word {
     font-family: vanguardCF-bold, serif;
     position: absolute;
-    width: 515px;
+    width: 720px;
     opacity: 0;
 }
 
