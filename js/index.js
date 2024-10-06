@@ -25,15 +25,19 @@ onload = function () {
     const copyButton = document.querySelector("#copyButton");
     const numberToCopy = document.querySelector("#numberToCopy");
 
-    if (copyButton && numberToCopy) {
-        copyButton.addEventListener("click", function () {
-            let number = numberToCopy.innerText;
-            navigator.clipboard.writeText(number).then(() => {
-                copyButton.innerText = "COPIED!";
-            }).catch(err => {
-                console.error("Failed to copy: ", err);
-            });
+    function copyText() {
+        let number = numberToCopy.innerText;
+        navigator.clipboard.writeText(number).then(() => {
+            copyButton.innerText = "COPIED!";
+        }).catch(err => {
+            console.error("Failed to copy: ", err);
         });
+    }
+
+    // Attach event listeners to both the button and the text
+    if (copyButton && numberToCopy) {
+        copyButton.addEventListener("click", copyText);
+        numberToCopy.addEventListener("click", copyText);
     }
 
     // Toggle sidebar visibility
