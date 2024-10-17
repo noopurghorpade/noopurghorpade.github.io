@@ -1,7 +1,7 @@
 // testModule.js
 
 export function initializeLoader(loader) {
-    console.log("testModule: Initializing loader");
+    // console.log("testModule: Initializing loader");
     loader.style.transform = 'translateY(0)';
     setTimeout(() => {
         loader.style.transform = 'translateY(-100%)';
@@ -12,7 +12,7 @@ export function initializeLoader(loader) {
 }
 
 export function toggleSidebar(toggleButton, sidebar, closeButton) {
-    console.log("testModule: Setting up sidebar toggle");
+    // console.log("testModule: Setting up sidebar toggle");
     toggleButton.addEventListener("click", () => {
         sidebar.classList.toggle("active");
     });
@@ -27,7 +27,7 @@ export function toggleSidebar(toggleButton, sidebar, closeButton) {
 }
 
 export function setupBackToTop(button) {
-    console.log("testModule: Setting up back-to-top button");
+    // console.log("testModule: Setting up back-to-top button");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
             button.classList.add("show");
@@ -45,7 +45,7 @@ export function setupBackToTop(button) {
 }
 
 export function copyText(button, target) {
-    console.log("testModule: Setting up copy text functionality");
+    // console.log("testModule: Setting up copy text functionality");
     function copyHandler() {
         const text = target.innerText;
         navigator.clipboard.writeText(text).then(() => {
@@ -57,7 +57,7 @@ export function copyText(button, target) {
 }
 
 export function setupCursorMovement(cursor) {
-    console.log("testModule: Setting up cursor movement");
+    // console.log("testModule: Setting up cursor movement");
     document.addEventListener("mousemove", (e) => {
         cursor.style.left = `${e.clientX}px`;
         cursor.style.top = `${e.clientY}px`;
@@ -65,7 +65,7 @@ export function setupCursorMovement(cursor) {
 }
 
 export function animateWords(words) {
-    console.log("testModule: Setting up word animation");
+    // console.log("testModule: Setting up word animation");
     let wordArray = [], currentWord = 0;
     words[currentWord].style.opacity = 1;
 
@@ -96,16 +96,21 @@ export function animateWords(words) {
     }
 
     function splitLetters(word) {
-        let content = word.innerHTML;
-        word.innerHTML = '';
-        let letters = [];
-        content.split(/(&nbsp;| )/).forEach((char) => {
-            let letter = document.createElement('span');
+        var content = word.textContent;  // Use textContent instead of innerHTML
+        word.innerHTML = '';  // Clear the content
+        var letters = [];
+        for (var i = 0; i < content.length; i++) {
+            var letter = document.createElement('span');
             letter.className = 'letter';
-            letter.innerHTML = char === '&nbsp;' ? ' ' : char;
+            if (content.charAt(i) === ' ') {
+                letter.innerHTML = '&nbsp;';  // Add non-breaking space
+            } else {
+                letter.innerHTML = content.charAt(i);
+            }
             word.appendChild(letter);
             letters.push(letter);
-        });
+        }
+    
         wordArray.push(letters);
     }
 
@@ -114,7 +119,7 @@ export function animateWords(words) {
 }
 
 export function setupButtonHover(buttons) {
-    console.log("testModule: Setting up button hover effect");
+    // console.log("testModule: Setting up button hover effect");
     buttons.forEach(button => {
         button.addEventListener('mousemove', (e) => {
             const rect = button.getBoundingClientRect();
