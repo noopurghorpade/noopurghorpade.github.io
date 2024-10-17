@@ -540,7 +540,7 @@ body {
     /* Pointer cursor on hover */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     /* Smooth transitions */
-    opacity: 1;
+    /* opacity: 1; */
     /* Hidden by default */
     transform: translateY(100px);
     /* Move down initially */
@@ -550,6 +550,17 @@ body {
 
 .back-to-top:hover {
     background-color: #343a40;
+}
+
+#backToTop {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .imgfluid {
