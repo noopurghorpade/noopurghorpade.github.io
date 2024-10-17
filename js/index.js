@@ -71,6 +71,7 @@ onload = function () {
 
     let backToTopButton = document.querySelector("#backToTop");
 
+    // Show the button when the user scrolls down 100 pixels from the top of the document
     if (backToTopButton) {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 100) {
@@ -80,6 +81,7 @@ onload = function () {
             }
         });
 
+        // Smooth scroll to the top when the button is clicked
         backToTopButton.addEventListener("click", (e) => {
             e.preventDefault();
             window.scrollTo({
@@ -186,4 +188,4 @@ onload = function () {
             circleBtn.style.transform = 'translate(0, 0)';
         });
     });
-}; 
+};
