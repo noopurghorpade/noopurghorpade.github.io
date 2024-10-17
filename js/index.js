@@ -186,4 +186,4 @@ onload = function () {
             circleBtn.style.transform = 'translate(0, 0)';
         });
     });
-};
+}; 
