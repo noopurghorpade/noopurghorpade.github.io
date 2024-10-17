@@ -74,7 +74,7 @@ onload = function () {
     // Show the button when the user scrolls down 100 pixels from the top of the document
     if (backToTopButton) {
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 200) {
                 backToTopButton.classList.add("show");
             } else {
                 backToTopButton.classList.remove("show");
