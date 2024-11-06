@@ -1,5 +1,4 @@
 import {
-    initializeLoader,
     toggleSidebar,
     setupBackToTop,
     copyText,
@@ -12,11 +11,11 @@ onload = function () {
     console.log("moduleContainer: onload event triggered");
 
     // Loader
-    const loader = document.getElementById('loader');
-    if (loader) {
-        console.log("moduleContainer: Initializing loader");
-        initializeLoader(loader);
-    }
+    // const loader = document.getElementById('loader');
+    // if (loader) {
+    //     console.log("moduleContainer: Initializing loader");
+    //     initializeLoader(loader);
+    // }
 
     // Sidebar Toggle
     const toggleSidebarButton = document.querySelector("#toggleSidebar");
