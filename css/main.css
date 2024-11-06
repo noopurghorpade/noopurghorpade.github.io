@@ -1,18 +1,27 @@
-html {
-    scrollbar-width:none;
-    min-width: 100%;
-}
 
-*{
+* {
     padding: 0px;
 }
 
-.padding45Padding0{
+html {
+    /* scrollbar-width:none; */
+    min-width: 100%;
+}
+
+/* :root {
+    color-scheme: light;
+} */
+
+.space2 {
+    line-height: 32px;
+}
+
+.padding45Padding0 {
     padding: 33px;
     padding-top: 0px;
 }
 
-.fontSize37{
+.fontSize37 {
     font-size: 37px;
 }
 
@@ -21,7 +30,7 @@ html {
     height: 700px;
 }
 
-.bgblackdhadpad{
+.bgblackdhadpad {
     background-color: #0e0e0e;
 }
 
@@ -36,7 +45,7 @@ html {
     line-height: 1;
 }
 
-.bglightgray{
+.bglightgray {
     background-color: #ebebeb;
 }
 
@@ -44,33 +53,35 @@ html {
     padding-right: 238px;
 }
 
-.travoPurple{
+.travoPurple {
     color: #783f7b;
 }
 
-.comfortDarkBlue{
+.comfortDarkBlue {
     color: #001f82;
 }
 
-.comfortLightBlue{
+.comfortLightBlue {
     color: #008ee8;
 }
 
-.bgComfortLightBlue{
-    background-color: #008ee8;;
+.bgComfortLightBlue {
+    background-color: #008ee8;
 }
 
-.infoBlue{
+.infoBlue {
     color: #1818ff;
 }
 
-.margin-top329{
+.margin-top329 {
     margin-top: 329px;
 }
 
 .container-fluid {
-    width: 100%; /* Use percentage */
-    max-width: 100%; /* Prevent exceeding viewport */
+    width: 100%;
+    /* Use percentage */
+    max-width: 100%;
+    /* Prevent exceeding viewport */
     /* padding-left: 10%; */
 }
 
@@ -89,7 +100,8 @@ html {
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
-    line-height: 150px; /* Aligns text vertically */
+    line-height: 150px;
+    /* Aligns text vertically */
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -119,34 +131,45 @@ html {
     transform: translate(-5%, -5%);
 }
 
-
-
 /* Ensure full black background for the loader */
 .loaders {
-    position: fixed;          /* Fix to viewport */
-    top: 0;                  /* Position at the top */
+    position: fixed;
+    /* Fix to viewport */
+    top: 0;
+    /* Position at the top */
     left: 0;
-    z-index: 99999;                 /* Align to the left */
-    width: 100vw;            /* Full width */
-    height: 100vh;           /* Full height */
-    background-color: black; /* Black background */
-    display: flex;           /* Center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    transform: translateY(-100%); /* Start off-screen */
-    transition: transform 1s ease; /* Smooth transition */
+    z-index: 99999;
+    /* Align to the left */
+    width: 100vw;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    background-color: black;
+    /* Black background */
+    display: flex;
+    /* Center content */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    transform: translateY(-100%);
+    /* Start off-screen */
+    transition: transform 1s ease;
+    /* Smooth transition */
 }
 
 .spinner {
     --circle-width: 20px;
     position: relative;
-    width: 100px; /* Adjusted size */
-    height: 100px; /* Adjusted size */
+    width: 100px;
+    /* Adjusted size */
+    height: 100px;
+    /* Adjusted size */
     background: rgba(0, 0, 0, 0.8);
 }
 
 .spinner:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 50%;
@@ -154,7 +177,11 @@ html {
     transform: translate(-50%, -50%);
     width: var(--circle-width);
     height: var(--circle-width);
-    background: conic-gradient(transparent var(--firstpct), #fff var(--firstpct), #fff var(--secondpct), transparent var(--secondpct)), rgba(255, 255, 255, 0.2);
+    background: conic-gradient(transparent var(--firstpct),
+            #fff var(--firstpct),
+            #fff var(--secondpct),
+            transparent var(--secondpct)),
+        rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     z-index: 10;
     animation: spinning 2s infinite linear;
@@ -183,17 +210,16 @@ html {
 
 /* Define custom properties for gradient animation */
 @property --firstpct {
-    syntax: '<percentage>';
+    syntax: "<percentage>";
     inherits: false;
     initial-value: 0%;
 }
 
 @property --secondpct {
-    syntax: '<percentage>';
+    syntax: "<percentage>";
     inherits: false;
     initial-value: 0%;
 }
-
 
 @font-face {
     font-family: "Raleway-Bold";
@@ -251,11 +277,11 @@ html {
     font-style: normal;
 }
 
-.space{
+.space {
     line-height: 40px;
 }
 
-.fontPoppinsSemiBold{
+.fontPoppinsSemiBold {
     font-family: "Poppins-Semi-Bold";
 }
 
@@ -283,34 +309,33 @@ html {
     font-size: 22px;
 }
 
-.img-fluidManual{
+.img-fluidManual {
     width: 100%;
     height: auto;
     max-width: 100%;
 }
 
-
-.fontSize12{
+.fontSize12 {
     font-size: 12px;
 }
 
-.paddingLeft34{
+.paddingLeft34 {
     padding-left: 34px;
 }
 
-.padding-left138{
+.padding-left138 {
     padding-left: 138px;
 }
 
-.fontSize50{
+.fontSize50 {
     font-size: 50px;
 }
 
-.fontSize18{
+.fontSize18 {
     font-size: 18px;
 }
 
-.fontSize25{
+.fontSize25 {
     font-size: 25px;
 }
 
@@ -322,11 +347,11 @@ html {
     font-family: Poppins-Regular;
 }
 
-.fontVanguardBold{
+.fontVanguardBold {
     font-family: vanguardCF-bold, serif;
 }
 
-.imageOuter{
+.imageOuter {
     /* height: 667px; */
     width: 100%;
 }
@@ -357,11 +382,11 @@ html {
 }
 
 .word2 {
-    font-size: 140px!important;
-    line-height: 150px!important;
-    font-family: vanguardCF-bold, serif!important;
-    position: absolute!important;
-    width: 515px!important;
+    font-size: 140px !important;
+    line-height: 150px !important;
+    font-family: vanguardCF-bold, serif !important;
+    position: absolute !important;
+    width: 515px !important;
     opacity: 0;
 }
 
@@ -390,7 +415,6 @@ html {
     transform: rotateX(0deg);
     transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 
 .link {
     font-family: Poppins-Regular;
@@ -468,9 +492,9 @@ html {
 }
 
 /* .projectThumbnail img { */
-    /* width: 100%; */
-    /* height: auto; */
-    /* display: block; */
+/* width: 100%; */
+/* height: auto; */
+/* display: block; */
 /* } */
 
 .overlay-link {
@@ -488,7 +512,7 @@ html {
 }
 
 .overlay {
-    background:#000000;
+    background: #000000;
     color: white;
     font-size: 20px;
     display: flex;
@@ -697,8 +721,6 @@ body {
         right: -100%;
     }
 
-
-
     .textContainer .text {
         position: relative;
         color: #212529;
@@ -715,9 +737,6 @@ body {
         width: 322px;
         opacity: 0;
     }
-
-    
-
 
     .text {
         /* position: absolute; */
@@ -739,6 +758,7 @@ body {
     .paddingLeft-100px {
         padding-left: 212px;
     }
+
     .cursor {
         display: none;
         cursor: none;
@@ -762,22 +782,27 @@ body {
     .padding-left138 {
         padding-left: 50px;
     }
+
     .fontSize18 {
         font-size: 14px;
     }
+
     .fontSize25 {
         font-size: 21px;
     }
+
     .fontSize30 {
         font-size: 22px;
     }
+
     .fontSize22 {
         font-size: 17px;
     }
+
     .padding-right238 {
         padding-right: 0px;
     }
-    
+
     .displayNameContact2 {
         letter-spacing: 5px;
         text-transform: uppercase;
@@ -788,10 +813,12 @@ body {
         /* font-weight: 700; */
         line-height: 1;
     }
+
     .iframeHW {
         width: 100%;
         height: 400px;
     }
+
     .padding45Padding0 {
         padding: 13px;
         padding-top: 0px;
@@ -823,6 +850,7 @@ body {
         padding-left: 0px;
         margin-top: 0px;
     }
+
     .textContainer .text {
         position: relative;
         color: #212529;
@@ -884,6 +912,7 @@ body {
     .padding-left138 {
         padding-left: 50px;
     }
+
     .fontSize18 {
         font-size: 14px;
     }
@@ -891,6 +920,7 @@ body {
     .fontSize25 {
         font-size: 21px;
     }
+
     .fontSize30 {
         font-size: 22px;
     }
@@ -898,10 +928,11 @@ body {
     .fontSize22 {
         font-size: 17px;
     }
+
     .padding-right238 {
         padding-right: 0px;
     }
-    
+
     .displayNameContact2 {
         letter-spacing: 5px;
         text-transform: uppercase;
@@ -912,17 +943,23 @@ body {
         /* font-weight: 700; */
         line-height: 1;
     }
+
     .word2 {
-        font-size: 140px!important;
-        line-height: 150px!important;
+        font-size: 140px !important;
+        line-height: 150px !important;
     }
 
     .iframeHW {
         width: 100%;
         height: 400px;
     }
+
     .padding45Padding0 {
         padding: 13px;
         padding-top: 0px;
+    }
+
+    html {
+        scrollbar-width: none;
     }
 }
