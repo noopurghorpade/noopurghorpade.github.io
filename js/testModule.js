@@ -1,15 +1,15 @@
 // testModule.js
 
-export function initializeLoader(loader) {
-    // console.log("testModule: Initializing loader");
-    loader.style.transform = 'translateY(0)';
-    setTimeout(() => {
-        loader.style.transform = 'translateY(-100%)';
-        setTimeout(() => {
-            loader.style.display = 'none';
-        }, 1000);
-    }, 3000);
-}
+// export function initializeLoader(loader) {
+//      console.log("testModule: Initializing loader");
+//     loader.style.transform = 'translateY(0)';
+//     setTimeout(() => {
+//         loader.style.transform = 'translateY(-100%)';
+//         setTimeout(() => {
+//             loader.style.display = 'none';
+//         }, 1000);
+//     }, 3000);
+// }
 
 export function toggleSidebar(toggleButton, sidebar, closeButton) {
     // console.log("testModule: Setting up sidebar toggle");
